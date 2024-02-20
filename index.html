@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="dist/styles.css">
+      <title>Pomodoro Timer</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <img class="logo" src="./asset/tomato.png" alt="Tomato">
+      <h1>Pomodoro Timer</h1>
+      <div class="counter" id="remainingTime">25:00</div>
+      <ul class="inline-list">
+        <li><button class="btn" onclick="startCountdown()">Start</button></li>
+        <li><button class="btn" onclick="pauseCountdown()">Pause</button></li>
+        <li><button class="btn" onclick="resetCountdown()">Reset</button></li>
+      </ul>
+    </div>
+    <script src="./dist/renderer.js"></script>
+  </body>
+</html>

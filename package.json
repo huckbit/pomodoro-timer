@@ -1,0 +1,45 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "description": "pomodoro timer using electron",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:sass": "sass --watch src/style/styles.scss dist/styles.css",
+    "start:run": "tsc -w && electron .",
+    "start": "concurrently npm:start:*",
+    "create-mac-package": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icon.icns --prune=true --out=release-builds"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huckbit/pomodoro.git"
+  },
+  "keywords": [
+    "pomodoro"
+  ],
+  "author": "Max Ranauro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huckbit/pomodoro/issues"
+  },
+  "homepage": "https://github.com/huckbit/pomodoro#readme",
+  "build": {
+    "appId": "com.pomodoro-app",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "icon": "assets/icon.icns"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^20.11.19",
+    "concurrently": "^8.2.2",
+    "electron-packager": "^17.1.2",
+    "sass": "^1.71.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@types/play-sound": "^1.1.2",
+    "electron": "^29.0.0",
+    "play-sound": "^1.1.6"
+  }
+}
