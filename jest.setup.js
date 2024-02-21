@@ -1,3 +1,5 @@
+import '@testing-library/jest-dom';
+
 global.Audio = jest.fn().mockImplementation(() => ({
   play: jest.fn(),
   pause: jest.fn(),

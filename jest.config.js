@@ -1,4 +1,9 @@
 module.exports = {
-  testEnvironment: 'jsdom',
-  testMatch: ['**/test/browser/**/*.test.js'], // adjust this to match your file structure
+  testEnvironment: 'jest-environment-jsdom',
+  testMatch: ['**/test/**/*.test.ts'],
+  transformIgnorePatterns: ['/node_modules/', '/dist/'],
+  setupFilesAfterEnv: ['./jest.setup.js'],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
+  },
 };
