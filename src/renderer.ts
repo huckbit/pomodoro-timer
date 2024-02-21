@@ -18,7 +18,7 @@ function renderRemainingTime(timeInSeconds: number) {
   }
 }
 
-function timeFinished(): void {
+export function timeFinished(): void {
   const remainingTimeElement = document.getElementById('remainingTime');
   if (remainingTimeElement) {
     remainingTimeElement.textContent = 'Time to take a break!';
@@ -27,7 +27,7 @@ function timeFinished(): void {
   resetCountdown();
 }
 
-function startCountdown(): void {
+export function startCountdown(): void {
   startAudio.play();
   isCounting = true;
   countdownInterval = setInterval(() => {
@@ -44,13 +44,13 @@ function startCountdown(): void {
   }, 1000);
 }
 
-function pauseCountdown(): void {
+export function pauseCountdown(): void {
   pauseAudio.play();
   clearInterval(countdownInterval);
   isCounting = false;
 }
 
-function resetCountdown(): void {
+export function resetCountdown(): void {
   resetAudio.play();
   clearInterval(countdownInterval);
   renderRemainingTime(pomodoroTime);
