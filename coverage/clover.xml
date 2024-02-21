@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1708533491005" clover="3.2.0">
-  <project timestamp="1708533491005" name="All files">
+<coverage generated="1708536674634" clover="3.2.0">
+  <project timestamp="1708536674634" name="All files">
     <metrics statements="34" coveredstatements="32" conditionals="8" coveredconditionals="4" methods="6" coveredmethods="6" elements="48" coveredelements="42" complexity="0" loc="34" ncloc="34" packages="1" files="1" classes="1"/>
     <file name="renderer.ts" path="/Users/huckbit/dev/electron/pomodoro-timer/src/renderer.ts">
       <metrics statements="34" coveredstatements="32" conditionals="8" coveredconditionals="4" methods="6" coveredmethods="6"/>
