@@ -1,14 +1,14 @@
 const pomodoroTime = 25 * 60;
 let countdownTime: number = pomodoroTime;
-let countdownInterval: NodeJS.Timeout;
-let isCounting = false;
-const finishedAudio = new Audio('./asset/audio/dingLing.mp3');
-const startAudio = new Audio('./asset/audio/bubble.mp3');
-const pauseAudio = new Audio('./asset/audio/pop.mp3');
-const resetAudio = new Audio('./asset/audio/multiPop.mp3');
+export let countdownInterval: NodeJS.Timeout;
+export let isCounting = false;
+export const finishedAudio = new Audio('./asset/audio/dingLing.mp3');
+export const startAudio = new Audio('./asset/audio/bubble.mp3');
+export const pauseAudio = new Audio('./asset/audio/pop.mp3');
+export const resetAudio = new Audio('./asset/audio/multiPop.mp3');
 
 /* updating timer in the FE */
-function renderRemainingTime(timeInSeconds: number) {
+export function renderRemainingTime(timeInSeconds: number) {
   const minutes = Math.floor(timeInSeconds / 60);
   const seconds = timeInSeconds % 60;
 
