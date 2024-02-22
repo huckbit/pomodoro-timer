@@ -1,4 +1,4 @@
-import { timeFinished, startCountdown, renderRemainingTime, pauseCountdown, countdownInterval, isCounting, finishedAudio, startAudio, pauseAudio, resetAudio } from '../src/renderer';
+import { timeFinished, startCountdown, renderRemainingTime, pauseCountdown, countdownInterval, isCounting, startAudio, pauseAudio } from '../src/renderer';
 import * as module from '../src/renderer';
 
 beforeEach(() => {

@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "start:sass": "sass --watch src/style/styles.scss dist/styles.css",
-    "start:run": "tsc -w && electron .",
+    "start:electron": "tsc && electron .",
     "start": "concurrently npm:start:*",
+    "watch:run": "tsc -w",
     "create-mac-package": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icon.icns --prune=true --out=release-builds",
     "create-windows-package": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/icon.ico --prune=true --out=release-builds",
     "create-linux-package": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icon.png --prune=true --out=release-builds",
@@ -53,7 +54,9 @@
   },
   "dependencies": {
     "@types/play-sound": "^1.1.2",
+    "@types/sqlite3": "^3.1.11",
     "electron": "^29.0.0",
-    "play-sound": "^1.1.6"
+    "play-sound": "^1.1.6",
+    "sqlite3": "^5.1.7"
   }
 }
