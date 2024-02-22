@@ -1,14 +1,14 @@
 const pomodoroTime = 25 * 60;
 let countdownTime: number = pomodoroTime;
-export let countdownInterval: NodeJS.Timeout;
-export let isCounting = false;
-export const finishedAudio = new Audio('./asset/audio/dingLing.mp3');
-export const startAudio = new Audio('./asset/audio/bubble.mp3');
-export const pauseAudio = new Audio('./asset/audio/pop.mp3');
-export const resetAudio = new Audio('./asset/audio/multiPop.mp3');
+let countdownInterval: NodeJS.Timeout;
+let isCounting = false;
+const finishedAudio = new Audio('./asset/audio/dingLing.mp3');
+const startAudio = new Audio('./asset/audio/bubble.mp3');
+const pauseAudio = new Audio('./asset/audio/pop.mp3');
+const resetAudio = new Audio('./asset/audio/multiPop.mp3');
 
 /* updating timer in the FE */
-export function renderRemainingTime(timeInSeconds: number) {
+function renderRemainingTime(timeInSeconds: number) {
   const minutes = Math.floor(timeInSeconds / 60);
   const seconds = timeInSeconds % 60;
 
@@ -18,7 +18,7 @@ export function renderRemainingTime(timeInSeconds: number) {
   }
 }
 
-export function timeFinished(): void {
+function timeFinished(): void {
   const remainingTimeElement = document.getElementById('remainingTime');
   if (remainingTimeElement) {
     remainingTimeElement.textContent = 'Time to take a break!';
@@ -27,7 +27,7 @@ export function timeFinished(): void {
   resetCountdown();
 }
 
-export function startCountdown(): void {
+function startCountdown(): void {
   startAudio.play();
   isCounting = true;
   countdownInterval = setInterval(() => {
@@ -44,13 +44,13 @@ export function startCountdown(): void {
   }, 1000);
 }
 
-export function pauseCountdown(): void {
+function pauseCountdown(): void {
   pauseAudio.play();
   clearInterval(countdownInterval);
   isCounting = false;
 }
 
-export function resetCountdown(): void {
+function resetCountdown(): void {
   resetAudio.play();
   clearInterval(countdownInterval);
   renderRemainingTime(pomodoroTime);
