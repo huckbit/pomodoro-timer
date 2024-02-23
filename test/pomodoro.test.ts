@@ -1,5 +1,5 @@
 import { timeFinished, startCountdown, renderRemainingTime, pauseCountdown, countdownInterval, isCounting, finishedAudio, startAudio, pauseAudio, resetAudio } from '../src/renderer';
-import * as module from '../src/renderer';
+import * as module from '../src/pomodoro';
 
 beforeEach(() => {
   document.body.innerHTML = `

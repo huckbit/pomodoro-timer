@@ -47,4 +47,55 @@ body {
     background-color: #d13f2d;
     transform: translateY(2px);
   }
+
+  &.blue {
+    background-color: #4b6076;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #dd9a1d;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px 0;
+  max-width: 500px;
+  transition: all 0.3s ease-in-out;
+  &:focus {
+    border-color: #db5b47;
+  }
+  &::placeholder {
+    font-size: 15px;
+  }
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.settings {
+  margin: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+  &::after {
+    content: 'Settings';
+    text-align: end;
+    padding-right: 16px;
+    text-decoration: underline;
+  }
+  & > .time-set {
+    overflow: hidden;
+  }
+  &:hover {
+    grid-template-rows: 1fr;
+    cursor: pointer;
+  }
 }

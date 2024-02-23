@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link rel="stylesheet" type="text/css" href="dist/styles.css">
-      <title>Pomodoro Timer</title>
+    <link rel="stylesheet" type="text/css" href="dist/styles.css" />
+    <title>Pomodoro Timer</title>
   </head>
   <body>
     <div class="wrapper">
-      <img class="logo" src="./asset/tomato.png" alt="Tomato">
+      <div class="settings">
+        <div class="time-set">
+          <form id="setTimer" autocomplete="off">
+            <label for="inputValue">Minutes:</label>
+            <input type="text" id="inputValue" name="inputValue" placeholder="enter value from 1 to 60" min="1" max="60" />
+            <button class="btn blue" type="submit">Set Timer</button>
+          </form>
+        </div>
+      </div>
+      <img class="logo" src="./asset/graphics/tomato.png" alt="Tomato" />
       <h1>Pomodoro Timer</h1>
-      <div class="counter" id="remainingTime">25:00</div>
+      <div class="counter" id="remainingTime"></div>
       <ul class="inline-list">
         <li><button class="btn" onclick="startCountdown()">Start</button></li>
         <li><button class="btn" onclick="pauseCountdown()">Pause</button></li>
         <li><button class="btn" onclick="resetCountdown()">Reset</button></li>
       </ul>
     </div>
-    <script src="./dist/renderer.js"></script>
+    <script src="./dist/pomodoro.js"></script>
   </body>
 </html>
